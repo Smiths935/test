@@ -1,0 +1,245 @@
+/* NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+h1 {
+    font-weight: 700;
+    font-family: emoji;
+    margin: 0;
+}
+
+h4 {
+    font-weight: 700;
+    font-family: emoji;
+    margin: 0;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    background-color: #007BFF;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+.nav-link.active {
+    background-color: #444;
+    border-bottom: #007BFF solid 3.5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.submenu, .subsubmenu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    z-index: 10;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.nav-item:hover .submenu,
+.submenu:hover .subsubmenu {
+    display: flex;
+}
+
+.submenu button, .subsubmenu button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccc;
+    text-align: left;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.submenu button:hover, .subsubmenu button:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.nav-date-time {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-right .icon {
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-right .icon:hover {
+    color: #007BFF;
+    transform: scale(1.2);
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-link {
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.user-link:hover {
+    background-color: #007BFF;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+.user-submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    z-index: 10;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.user-link:hover + .user-submenu,
+.user-submenu:hover {
+    display: flex;
+}
+
+.user-submenu button {
+    background: none;
+    border: none;
+    color: #ccc;
+    text-align: left;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.user-submenu button:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .nav-right {
+        justify-content: flex-end;
+    }
+
+    .nav-date-time {
+        margin: 10px 0;
+        align-self: center;
+        font-size: 14px;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .submenu, .subsubmenu {
+        width: 100%;
+    }
+
+    .submenu button, .subsubmenu button {
+        width: 100%;
+        text-align: left;
+    }
+}

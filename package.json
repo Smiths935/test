@@ -1,0 +1,95 @@
+{
+  "name": "gestion-reunion",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "^7.24.7",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@zegocloud/zego-uikit-prebuilt": "^2.6.0",
+    "buffer": "^6.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "^11.1.0",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
+    "file-loader": "^6.2.0",
+    "firebase": "^10.12.2",
+    "framer-motion": "^11.2.12",
+    "image-minimizer-webpack-plugin": "^4.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "jose": "^5.6.3",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-simple": "^0.5.6",
+    "process": "^0.11.10",
+    "react": "^18.3.1",
+    "react-awesome-slider": "^4.1.0",
+    "react-dom": "^18.3.1",
+    "react-firebase-hooks": "^5.1.1",
+    "react-router-dom": "^6.24.0",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^10.0.5",
+    "react-webcam": "^7.2.0",
+    "simple-peer": "^9.11.1",
+    "socket.io-client": "^4.7.5",
+    "stream-browserify": "^3.0.0",
+    "styled-components": "^6.1.11",
+    "terser-webpack-plugin": "^5.3.10",
+    "url-loader": "^4.1.1",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2",
+    "web-vitals": "^2.1.4",
+    "zego-express-engine-webrtc": "^2.17.0"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development --hot",
+    "build": "webpack --mode production",
+    "build:ci": "CI=false npm install --legacy-peer-deps && CI=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "lint": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.6.0",
+    "babel-loader": "^8.x.x",
+    "css-loader": "^6.11.0",
+    "eslint": "^9.6.0",
+    "eslint-plugin-react": "^7.34.3",
+    "gh-pages": "^6.1.1",
+    "globals": "^15.8.0",
+    "html-webpack-plugin": "^5.6.0",
+    "netlify-cli": "^17.32.1",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.x.x",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.x.x"
+  }
+}

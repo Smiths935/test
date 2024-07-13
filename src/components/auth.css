@@ -1,0 +1,112 @@
+
+.bodyLog {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+.waves {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.login-container, .signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+}
+
+.login-form, .signup-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 60px;
+  border: rgba(red, green, blue, alpha) 1px solid;
+  border-radius: 10px;
+  box-shadow:  6px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-field input:focus {
+  border-color: #333;
+}
+
+.input-field label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus + label, .input-field input:not(:placeholder-shown) + label {
+  top: -20px;
+  left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+p {
+  font-weight: 700;
+  font-family: emoji;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  font-family: emoji;
+  font-size: medium;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.btn.google {
+  background: #db4437;
+}
+
+.btn.google:hover {
+  background: #c23321;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .login-form, .signup-form {
+      width: 90%;
+      padding: 40px;
+  }
+}

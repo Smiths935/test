@@ -1,0 +1,171 @@
+/* src/components/LandingPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    overflow: hidden; 
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+.slides-container {
+    display: flex;
+    overflow: hidden; 
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    width: 100%;
+    height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+}
+
+.slide {
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.slide p {
+    font-size: 1.2rem;
+    animation: fadeInRight 1s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.landing-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.landing-button:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+    background-color: #000;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nav-button {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-button.left {
+    margin-left: 10px;
+}
+
+.nav-button.right {
+    margin-right: 10px;
+}
+
+.landing-footer {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,101 @@
+/* History.css */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.history-container {
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Pour éviter les débordements horizontaux */
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.history-header h2 {
+    margin: 0;
+}
+
+.history-filter {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.history-table th,
+.history-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.history-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.history-table tr {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.history-table td .join-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history-table td .join-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .history-container {
+        padding: 10px;
+    }
+
+    .history-table {
+        font-size: 0.9em;
+    }
+
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .history-filter {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

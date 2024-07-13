@@ -1,0 +1,70 @@
+.meeting-container {
+    padding: 20px;
+}
+
+.meeting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meeting-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.meeting-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.meeting-form button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}
+
+.popup {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.popup p {
+    margin: 0 0 10px;
+}
+
+.popup button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.popup button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.popup button:hover:not([disabled]) {
+    background-color: #218838;
+}

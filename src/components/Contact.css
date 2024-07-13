@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.contact-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #f9f9f9f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+}
+.contact-form {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+.delete-account {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+.delete-account:hover {
+    background-color: #c82333;
+}
+
+.contact-search input {
+    width: 83%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-results ul,
+.contact-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.contact-table th,
+.contact-table td,
+.search-results li {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.search-results button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-results button:hover {
+    background-color: #218838;
+}
+
+.contact-table button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-table button:hover {
+    background-color: #0056b3;
+}
+
+.notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifications li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notifications li p {
+    margin: 0;
+}
+
+.notifications li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.notifications li a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-table, .search-results ul {
+        font-size: 0.9em;
+    }
+
+    .contact-table button {
+        padding: 3px 7px;
+    }
+}
