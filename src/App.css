@@ -105,9 +105,9 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-.app-layout{
+/* .app-layout{
   background: #000;
-}
+} */
 
 .buttons-container button:hover {
   background-color: #444;
